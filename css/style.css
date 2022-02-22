@@ -1,0 +1,182 @@
+/* Import */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Variables */
+/* Couleurs */
+/* Polices */
+/* Header */
+.logo {
+  width: 100%;
+  padding: 20px 0 10px 0;
+  border-bottom: 2px solid #d6d6d6;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.logo h1 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 2.1em;
+  text-align: center;
+}
+
+/* Search */
+.search {
+  background-color: #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0;
+}
+
+.search i {
+  color: rgba(0, 0, 0, 0.65);
+  margin-right: 20px;
+}
+
+.search input {
+  border-style: hidden;
+  background-color: #ececec;
+  color: black;
+  font-family: "roboto", sans-serif;
+  font-weight: 600;
+  width: 140px;
+}
+
+.search ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.65);
+  font-family: "roboto", sans-serif;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.search :-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.65);
+  font-family: "roboto", sans-serif;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.search ::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.65);
+  font-family: "roboto", sans-serif;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.search ::placeholder {
+  color: rgba(0, 0, 0, 0.65);
+  font-family: "roboto", sans-serif;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.search .search_focus:focus {
+  outline: none;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+}
+
+.title h2 {
+  font-family: "roboto", sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.title p {
+  font-family: "roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.title a {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  background-color: #9356DC;
+  color: white;
+  padding: 18px;
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  border-radius: 30px;
+  -webkit-box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
+          box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
+}
+/*# sourceMappingURL=style.css.map */
