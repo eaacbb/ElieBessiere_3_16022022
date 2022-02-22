@@ -179,4 +179,8 @@ table {
   -webkit-box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
           box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
 }
+
+.title a:hover {
+  background-color: #FF79DA;
+}
 /*# sourceMappingURL=style.css.map */
