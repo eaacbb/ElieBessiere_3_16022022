@@ -1,0 +1,269 @@
+/* Import */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Variables */
+/* Couleurs */
+/* Polices */
+/* Header */
+header {
+  position: relative;
+}
+
+.logo {
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+
+.logo h1 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 2.1em;
+  text-align: center;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: 28px;
+  left: 25px;
+}
+
+.fa-arrow-left i {
+  color: rgba(0, 0, 0, 0.658);
+}
+
+/* Image */
+.img {
+  position: relative;
+  z-index: 0;
+}
+
+.img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
+/* Menu */
+.menus {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -50px;
+}
+
+.menus .restaurant_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.menus .restaurant_title h2 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 1.75em;
+}
+
+.menus .restaurant_title i {
+  font-size: 1.8em;
+}
+
+.menus .menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "roboto", sans-serif;
+}
+
+.menus .menu h3 {
+  width: 40px;
+  padding: 10px 0 5px 0;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 10px;
+}
+
+.menus .menu .meal {
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.menus .menu .meal h4 {
+  font-weight: 700;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+
+.menus .menu .meal .meal_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+}
+
+.menus .menu .meal .meal_desc .desc_text {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.menus .menu .meal .meal_desc .price {
+  font-weight: 700;
+}
+
+.menus .menu .meal:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
+  -webkit-transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+  transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+}
+
+.menus .command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+  padding-bottom: 100px;
+}
+
+.menus .command a {
+  background-color: #9356DC;
+  color: white;
+  padding: 15px 55px;
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  border-radius: 30px;
+  -webkit-box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
+          box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
+}
+
+.menus .command a:hover {
+  background-color: #FF79DA;
+  -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9356dc inset;
+          box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9356dc inset;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+  transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+}
+
+/* Footer */
+footer {
+  background-color: #243531;
+  padding: 20px 20px 40px 20px;
+}
+
+footer .footer_logo {
+  font-family: "shrikhand", sans-serif;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 1.15em;
+}
+
+footer .footer_sec {
+  font-family: "roboto", sans-serif;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+footer .footer_sec .footer_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer_sec a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer_sec a i {
+  padding-right: 10px;
+}
+
+footer .footer_sec a:hover {
+  color: #9356DC;
+}
+/*# sourceMappingURL=pagestyle.css.map */
