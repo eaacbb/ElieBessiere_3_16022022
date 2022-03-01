@@ -98,6 +98,9 @@ header{
             border-radius: 15px;
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             h4{
                 font-weight: 700;
                 font-size: 1.1em;
@@ -115,6 +118,12 @@ header{
                 .price{
                     font-weight: 700;
                 }
+            }
+            .check{
+                background-color: $tertiaire;
+                height: 100%;
+                padding: 20px;
+                color: white;
             }
         }
         .meal:hover{

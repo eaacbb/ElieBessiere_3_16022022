@@ -156,6 +156,15 @@ header {
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menus .menu .meal h4 {
@@ -184,6 +193,13 @@ header {
 
 .menus .menu .meal .meal_desc .price {
   font-weight: 700;
+}
+
+.menus .menu .meal .check {
+  background-color: #99E2D0;
+  height: 100%;
+  padding: 20px;
+  color: white;
 }
 
 .menus .menu .meal:hover {
