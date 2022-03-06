@@ -62,6 +62,11 @@ header {
   position: relative;
 }
 
+header a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.658);
+}
+
 .logo {
   width: 100%;
   padding: 20px 0 10px 0;
@@ -75,12 +80,9 @@ header {
 
 .fa-arrow-left {
   position: absolute;
-  top: 28px;
+  top: 21px;
   left: 25px;
-}
-
-.fa-arrow-left i {
-  color: rgba(0, 0, 0, 0.658);
+  font-size: 1.5em;
 }
 
 /* Image */
@@ -117,9 +119,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -130,8 +129,37 @@ header {
   font-size: 1.75em;
 }
 
-.menus .restaurant_title i {
+.menus .restaurant_title .restaurant_heart {
   font-size: 1.8em;
+}
+
+.menus .restaurant_title .restaurant_heart .fa-regular {
+  position: absolute;
+  right: 40px;
+  opacity: 100%;
+  color: black;
+  -webkit-transition: ease-in-out 0.35s;
+  transition: ease-in-out 0.35s;
+}
+
+.menus .restaurant_title .restaurant_heart .fa-solid {
+  position: absolute;
+  right: 40px;
+  opacity: 0%;
+  color: #FF79DA;
+  -webkit-transition: ease-in-out 0.35s;
+  transition: ease-in-out 0.35s;
+}
+
+.menus .restaurant_title .restaurant_heart .fa-regular:hover {
+  opacity: 0%;
+  color: transparent;
+  cursor: pointer;
+}
+
+.menus .restaurant_title .restaurant_heart .fa-solid:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 .menus .menu {
@@ -235,9 +263,9 @@ header {
 }
 
 .menus .command a:hover {
-  background-color: #FF79DA;
-  -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9356dc inset;
-          box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9356dc inset;
+  background-color: #ff79d986;
+  -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9256dc77 inset;
+          box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9256dc77 inset;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   -webkit-transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;

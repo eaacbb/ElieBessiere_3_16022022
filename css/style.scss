@@ -15,6 +15,96 @@ $tertiaire: #99E2D0;
 $shrik: 'shrikhand', sans-serif;
 $rob: 'roboto', sans-serif;
 
+    /* Animations */
+
+@keyframes loader{
+    from {opacity: 100%}
+    to {opacity: 0%}
+}
+@keyframes border{
+    0%{
+        width: 0px;
+      }
+    50%{
+        width: 125px;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+/* Loader */
+
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #9256dcdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+    animation: loader 2.525s ease-in-out 3s 1 normal forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    .loaderborder{
+        position: fixed;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        border-radius: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        animation: border 2.5s 1 linear forwards;
+    }
+    .loadertext{
+        display: flex;
+        font-family: $shrik;
+        color: white;
+        font-size: 2.5em;
+        opacity: 0%;
+        animation: loader 1.25s ease-out 0s 1 reverse forwards;
+        .lettre_1{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 0s 1 reverse forwards;
+        }
+        .lettre_2{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 0.3s 1 reverse forwards;
+        }
+        .lettre_3{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 0.6s 1 reverse forwards;
+        }
+        .lettre_4{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 0.9s 1 reverse forwards;
+        }
+        .lettre_5{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 1.2s 1 reverse forwards;
+        }
+        .lettre_6{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 1.5s 1 reverse forwards;
+        }
+        .lettre_7{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 1.8s 1 reverse forwards;
+        }
+        .lettre_8{
+            opacity: 0%;
+            animation: loader 1.25s ease-out 2.1s 1 reverse forwards;
+        }
+    }
+}
+
+header, main, footer{
+    opacity: 0%;
+    background-color: white;
+    animation: loader 3s ease-out 2s 1 reverse forwards;
+}
+
 /* Header */
 
 .logo{
@@ -97,9 +187,9 @@ $rob: 'roboto', sans-serif;
             40px 40px 45px 0px $secondaire inset;
         }
         a:hover{
-            background-color: $secondaire;
+            background-color: #ff79d986;
             box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 
-            0px 40px 50px 10px #9356dc inset;
+            0px 40px 50px 10px #9256dc77 inset;
             transform: scale(1.02);
             transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
         }
@@ -168,7 +258,7 @@ $rob: 'roboto', sans-serif;
         }
         .help:hover{
             transform: scale(1.02);
-            background-color: $tertiaire;
+            background-color: #f5edff;
             transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
         }
 }
@@ -244,9 +334,31 @@ $rob: 'roboto', sans-serif;
                     }
                 }
                 .restaurant_heart{
+                    position: relative;
                     padding-right: 20px;
                     padding-top: 10px;
                     font-size: 1.5em;
+                    .fa-regular{
+                        position: absolute;
+                        right: 20px;
+                        opacity: 100%;
+                        color: black;
+                        transition: ease-in-out 0.35s;
+                    }
+                    .fa-solid{
+                        position: absolute;
+                        right: 20px;
+                        opacity: 0%;
+                        color: #FF79DA;
+                        transition: ease-in-out 0.35s;
+                    }
+                    .fa-regular:hover{
+                        opacity: 0%;
+                        color: transparent;
+                    }
+                    .fa-solid:hover{
+                        opacity: 100%;
+                    }
                 }
             }
         }

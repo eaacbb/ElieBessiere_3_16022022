@@ -19,6 +19,10 @@ $rob: 'roboto', sans-serif;
 
 header{
     position: relative;
+    a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.658);
+    }
 }
 
 .logo{
@@ -32,11 +36,9 @@ header{
 }
 .fa-arrow-left{
     position: absolute;
-    top: 28px;
+    top: 21px;
     left: 25px;
-    i{
-        color: rgba(0, 0, 0, 0.658);
-    }
+    font-size: 1.5em;
 }
 
 /* Image */
@@ -68,7 +70,6 @@ header{
     .restaurant_title{
         display: flex;
         justify-content: space-between;
-        align-items: center;
         padding-top: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
@@ -76,8 +77,31 @@ header{
             font-family: $shrik;
             font-size: 1.75em;
         }
-        i{
+        .restaurant_heart{
             font-size: 1.8em;
+            .fa-regular{
+                position: absolute;
+                right: 40px;
+                opacity: 100%;
+                color: black;
+                transition: ease-in-out 0.35s;
+            }
+            .fa-solid{
+                position: absolute;
+                right: 40px;
+                opacity: 0%;
+                color: #FF79DA;
+                transition: ease-in-out 0.35s;
+            }
+            .fa-regular:hover{
+                opacity: 0%;
+                color: transparent;
+                cursor: pointer;
+            }
+            .fa-solid:hover{
+                opacity: 100%;
+                cursor: pointer;
+            }
         }
     }
     .menu{
@@ -149,9 +173,9 @@ header{
             40px 40px 45px 0px $secondaire inset;
         }
         a:hover{
-            background-color: $secondaire;
+            background-color: #ff79d986;
             box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 
-            0px 40px 50px 10px #9356dc inset;
+            0px 40px 50px 10px #9256dc77 inset;
             transform: scale(1.02);
             transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
         }
