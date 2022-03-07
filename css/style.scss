@@ -51,7 +51,6 @@ $rob: "roboto", sans-serif;
   overflow: hidden;
   pointer-events: none;
   animation: loader 2.525s ease-in-out 3s 1 normal forwards;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
   .loaderborder {
     position: fixed;
     border-top: 3px solid white;
