@@ -57,6 +57,32 @@ table {
 /* Variables */
 /* Couleurs */
 /* Polices */
+/* Animations */
+@-webkit-keyframes fade {
+  from {
+    opacity: 0%;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0%;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 /* Header */
 header {
   position: relative;
@@ -193,6 +219,7 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0%;
 }
 
 .menus .menu .meal .meal_principal {
@@ -200,12 +227,18 @@ header a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menus .menu .meal .meal_principal h4 {
   font-weight: 700;
   font-size: 1.1em;
   padding-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menus .menu .meal .meal_principal .meal_desc {
@@ -224,6 +257,9 @@ header a {
 .menus .menu .meal .meal_principal .meal_desc .desc_text {
   font-size: 0.9em;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menus .menu .meal .meal_principal .meal_desc .price {
@@ -247,7 +283,22 @@ header a {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.35em;
+}
+
+.menus .menu .meal_1 {
+  -webkit-animation: fade 1s linear 0.3s 1 normal forwards;
+          animation: fade 1s linear 0.3s 1 normal forwards;
+}
+
+.menus .menu .meal_2 {
+  -webkit-animation: fade 1s linear 0.6s 1 normal forwards;
+          animation: fade 1s linear 0.6s 1 normal forwards;
+}
+
+.menus .menu .meal_3 {
+  -webkit-animation: fade 1s linear 0.9s 1 normal forwards;
+          animation: fade 1s linear 0.9s 1 normal forwards;
 }
 
 .menus .menu .meal:hover {
@@ -255,14 +306,21 @@ header a {
           transform: scale(1.02);
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
           box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
-  -webkit-transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
-  transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .menus .menu .meal:hover .check {
-  width: 20%;
-  -webkit-transition: linear 0.4s;
-  transition: linear 0.4s;
+  width: 16%;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
+}
+
+.menus .menu .meal:hover .check .fa-circle-check {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menus .command {
