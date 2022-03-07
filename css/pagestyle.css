@@ -146,7 +146,7 @@ header a {
   position: absolute;
   right: 40px;
   opacity: 0%;
-  color: #FF79DA;
+  color: #ff79da;
   -webkit-transition: ease-in-out 0.35s;
   transition: ease-in-out 0.35s;
 }
@@ -171,15 +171,15 @@ header a {
 .menus .menu h3 {
   width: 40px;
   padding: 10px 0 5px 0;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   margin-bottom: 10px;
 }
 
 .menus .menu .meal {
   background-color: white;
+  height: 70px;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding: 15px;
   border-radius: 15px;
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
@@ -195,13 +195,20 @@ header a {
           align-items: center;
 }
 
-.menus .menu .meal h4 {
+.menus .menu .meal .meal_principal {
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menus .menu .meal .meal_principal h4 {
   font-weight: 700;
   font-size: 1.1em;
   padding-bottom: 10px;
 }
 
-.menus .menu .meal .meal_desc {
+.menus .menu .meal .meal_principal .meal_desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,20 +221,33 @@ header a {
   padding-right: 5px;
 }
 
-.menus .menu .meal .meal_desc .desc_text {
+.menus .menu .meal .meal_principal .meal_desc .desc_text {
   font-size: 0.9em;
   font-weight: 300;
 }
 
-.menus .menu .meal .meal_desc .price {
+.menus .menu .meal .meal_principal .meal_desc .price {
   font-weight: 700;
 }
 
 .menus .menu .meal .check {
-  background-color: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99e2d0;
   height: 100%;
-  padding: 20px;
+  width: 0%;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   color: white;
+  font-size: 1.2em;
 }
 
 .menus .menu .meal:hover {
@@ -237,6 +257,12 @@ header a {
           box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
   -webkit-transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
   transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+}
+
+.menus .menu .meal:hover .check {
+  width: 20%;
+  -webkit-transition: linear 0.4s;
+  transition: linear 0.4s;
 }
 
 .menus .command {
@@ -251,15 +277,15 @@ header a {
 }
 
 .menus .command a {
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   padding: 15px 55px;
   text-decoration: none;
   font-family: "roboto", sans-serif;
   font-weight: 400;
   border-radius: 30px;
-  -webkit-box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
-          box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #FF79DA inset;
+  -webkit-box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #ff79da inset;
+          box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px #ff79da inset;
 }
 
 .menus .command a:hover {
@@ -308,6 +334,6 @@ footer .footer_sec a i {
 }
 
 footer .footer_sec a:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 /*# sourceMappingURL=pagestyle.css.map */

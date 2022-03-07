@@ -4,400 +4,404 @@
 
 /* Variables */
 
-    /* Couleurs */
+/* Couleurs */
 
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire: #99E2D0;
+$primaire: #9356dc;
+$secondaire: #ff79da;
+$tertiaire: #99e2d0;
 
-    /* Polices */
+/* Polices */
 
-$shrik: 'shrikhand', sans-serif;
-$rob: 'roboto', sans-serif;
+$shrik: "shrikhand", sans-serif;
+$rob: "roboto", sans-serif;
 
-    /* Animations */
+/* Animations */
 
-@keyframes loader{
-    from {opacity: 100%}
-    to {opacity: 0%}
+@keyframes loader {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
 }
-@keyframes border{
-    0%{
-        width: 0px;
-      }
-    50%{
-        width: 125px;
-    }
-    100%{
-        width: 250px;
-    }
+@keyframes border {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 125px;
+  }
+  100% {
+    width: 250px;
+  }
 }
 
 /* Loader */
 
-.loader{
-    width: 100%;
-    height: 100%;
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #9256dcdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+  pointer-events: none;
+  animation: loader 2.525s ease-in-out 3s 1 normal forwards;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  .loaderborder {
     position: fixed;
-    background-color: #9256dcdd;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-radius: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    animation: border 2.5s 1 linear forwards;
+  }
+  .loadertext {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    overflow: hidden;
-    pointer-events: none;
-    animation: loader 2.525s ease-in-out 3s 1 normal forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    .loaderborder{
-        position: fixed;
-        border-top: 3px solid white;
-        border-bottom: 3px solid white;
-        border-radius: 15px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        animation: border 2.5s 1 linear forwards;
+    font-family: $shrik;
+    color: white;
+    font-size: 2.5em;
+    opacity: 0%;
+    animation: loader 1.25s ease-out 0s 1 reverse forwards;
+    .lettre_1 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 0s 1 reverse forwards;
     }
-    .loadertext{
-        display: flex;
-        font-family: $shrik;
-        color: white;
-        font-size: 2.5em;
-        opacity: 0%;
-        animation: loader 1.25s ease-out 0s 1 reverse forwards;
-        .lettre_1{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 0s 1 reverse forwards;
-        }
-        .lettre_2{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 0.3s 1 reverse forwards;
-        }
-        .lettre_3{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 0.6s 1 reverse forwards;
-        }
-        .lettre_4{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 0.9s 1 reverse forwards;
-        }
-        .lettre_5{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 1.2s 1 reverse forwards;
-        }
-        .lettre_6{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 1.5s 1 reverse forwards;
-        }
-        .lettre_7{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 1.8s 1 reverse forwards;
-        }
-        .lettre_8{
-            opacity: 0%;
-            animation: loader 1.25s ease-out 2.1s 1 reverse forwards;
-        }
+    .lettre_2 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 0.3s 1 reverse forwards;
     }
+    .lettre_3 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 0.6s 1 reverse forwards;
+    }
+    .lettre_4 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 0.9s 1 reverse forwards;
+    }
+    .lettre_5 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 1.2s 1 reverse forwards;
+    }
+    .lettre_6 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 1.5s 1 reverse forwards;
+    }
+    .lettre_7 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 1.8s 1 reverse forwards;
+    }
+    .lettre_8 {
+      opacity: 0%;
+      animation: loader 1.25s ease-out 2.1s 1 reverse forwards;
+    }
+  }
 }
 
-header, main, footer{
-    opacity: 0%;
-    background-color: white;
-    animation: loader 3s ease-out 2s 1 reverse forwards;
+header,
+main,
+footer {
+  opacity: 0%;
+  background-color: white;
+  animation: loader 3s ease-out 2s 1 reverse forwards;
 }
 
 /* Header */
 
-.logo{
-    width: 100%;
-    padding: 20px 0 10px 0;
-    border-bottom: 2px solid rgb(214, 214, 214);
-        h1{
-            font-family: $shrik;
-            font-size: 2.1em;
-            text-align: center;
-        }
+.logo {
+  width: 100%;
+  padding: 20px 0 10px 0;
+  border-bottom: 2px solid rgb(214, 214, 214);
+  h1 {
+    font-family: $shrik;
+    font-size: 2.1em;
+    text-align: center;
+  }
 }
 
 /* Search */
 
-.search{
+.search {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  i {
+    color: rgba(0, 0, 0, 0.65);
+    margin-right: 20px;
+  }
+  input {
+    border-style: hidden;
     background-color: rgb(236, 236, 236);
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-        i{
-            color: rgba(0, 0, 0, 0.65);
-            margin-right: 20px;
-        }
-        input{
-            border-style: hidden;
-            background-color: rgb(236, 236, 236);
-            color: black;
-            font-family: $rob;
-            font-weight: 600;
-            width: 140px;
-        }
-        ::placeholder{
-            color: rgba(0, 0, 0, 0.650);
-            font-family: $rob;
-            font-size: 1.15em;
-            font-weight: 600;
-        }
-        .search_focus:focus{
-            outline: none;
-        }
+    color: black;
+    font-family: $rob;
+    font-weight: 600;
+    width: 140px;
+  }
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.65);
+    font-family: $rob;
+    font-size: 1.15em;
+    font-weight: 600;
+  }
+  .search_focus:focus {
+    outline: none;
+  }
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(247, 247, 247);
-        h2{
-            font-family: $rob;
-            font-size: 1.6em;
-            font-weight: 600;
-            text-align: center;
-            padding-top: 35px;
-            padding-bottom: 10px;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-        p{
-            font-family: $rob;
-            font-size: 1.2em;
-            font-weight: 300;
-            text-align: center;
-            padding-top: 5px;
-            padding-bottom: 20px;
-            padding-right: 35px;
-            padding-left: 35px;
-        }
-        a{
-            margin-top: 20px;
-            margin-bottom: 80px;
-            background-color: $primaire;
-            color: white;
-            padding: 18px;
-            text-decoration: none;
-            font-family: $rob;
-            font-weight: 400;
-            border-radius: 30px;
-            box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 
-            40px 40px 45px 0px $secondaire inset;
-        }
-        a:hover{
-            background-color: #ff79d986;
-            box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 
-            0px 40px 50px 10px #9256dc77 inset;
-            transform: scale(1.02);
-            transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
-        }
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  h2 {
+    font-family: $rob;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  p {
+    font-family: $rob;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  a {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    background-color: $primaire;
+    color: white;
+    padding: 18px;
+    text-decoration: none;
+    font-family: $rob;
+    font-weight: 400;
+    border-radius: 30px;
+    box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px $secondaire inset;
+  }
+  a:hover {
+    background-color: #ff79d986;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.5), 0px 40px 50px 10px #9256dc77 inset;
+    transform: scale(1.02);
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+  }
 }
 
 /* Fonctionnement */
 
 .fonctionnement {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: $rob;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: $rob;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-bottom: 25px;
+  }
+  .help {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
-    flex-direction: column;
-        h2{
-            font-size: 1.3em;
-            font-weight: 700;
-            padding-bottom: 25px;
-        }
-        .help{
-            position: relative;
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            background-color: rgb(247, 247, 247);
-            margin-top: 15px;
-            margin-bottom: 15px;
-            border-radius: 20px;
-            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-                span{
-                    position: absolute;
-                    left: -10px;
-                    background-color: $primaire;
-                    color: white;
-                    padding: 10px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 25px;
-                    width: 25px;
-                }
-                i{
-                    color: rgba(0, 0, 0, 0.65);
-                    padding-right: 25px;
-                    margin-left: -20px;
-                    font-size: 1.2em;
-                }
-                .fa-mobile-alt{
-                    margin-left: -10px;
-                }
-                .fa-list-ul{
-                    margin-left: -25px;
-                }
-                h3{
-                    font-weight: 700;
-                }
-        }
-        .help:hover{
-            transform: scale(1.02);
-            background-color: #f5edff;
-            transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
-        }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(247, 247, 247);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    span {
+      position: absolute;
+      left: -10px;
+      background-color: $primaire;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 25px;
+      width: 25px;
+    }
+    i {
+      color: rgba(0, 0, 0, 0.65);
+      padding-right: 25px;
+      margin-left: -20px;
+      font-size: 1.2em;
+    }
+    .fa-mobile-alt {
+      margin-left: -10px;
+    }
+    .fa-list-ul {
+      margin-left: -25px;
+    }
+    h3 {
+      font-weight: 700;
+    }
+  }
+  .help:hover {
+    transform: scale(1.02);
+    background-color: #f5edff;
+    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+  }
 }
 
-.restaurants{
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 247, 247);
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: $rob;
+  h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  .restaurant_cards {
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(247, 247, 247);
-    padding-top: 50px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: $rob;
-    h2{
-        font-size: 1.6em;
-        font-weight: 700;
-    }
-    .restaurant_cards{
-        padding-top: 20px;
-        padding-bottom: 20px;
+    .restaurant_card {
+      position: relative;
+      background-color: white;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      height: 270px;
+      box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+      a {
+        text-decoration: none;
+      }
+      .restaurant_img {
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+        }
+        .new {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          padding: 8px;
+          background-color: $tertiaire;
+          color: #629185;
+          font-size: 0.85em;
+          font-weight: 600;
+          border-radius: 2px;
+        }
+        .new:hover {
+          color: $tertiaire;
+          background-color: #629185;
+          transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+        }
+      }
+      .restaurant_desc {
         display: flex;
-        flex-direction: column;
-        .restaurant_card{
-            position: relative;
-            background-color: white;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            height: 270px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
-            a{
-                text-decoration: none;
-            }
-            .restaurant_img{
-                img{
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    border-top-left-radius: 20px;
-                    border-top-right-radius: 20px;
-                }
-                .new{
-                    position: absolute;
-                    right: 15px;
-                    top: 15px;
-                    padding: 8px;
-                    background-color: $tertiaire;
-                    color: #629185;
-                    font-size: 0.85em;
-                    font-weight: 600;
-                    border-radius: 2px;
-                }
-                .new:hover{
-                    color: $tertiaire;
-                    background-color: #629185;
-                    transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
-                }
-            }
-            .restaurant_desc{
-                display: flex;
-                justify-content: space-between;
-                padding-top: 10px;
-                .restaurant_text{
-                    padding-left: 20px;
-                    h3{
-                        font-weight: 600;
-                        font-size: 1.1em;
-                        color: black;
-                        padding-bottom: 5px;
-                    }
-                    p{
-                        color: black;
-                    }
-                }
-                .restaurant_heart{
-                    position: relative;
-                    padding-right: 20px;
-                    padding-top: 10px;
-                    font-size: 1.5em;
-                    .fa-regular{
-                        position: absolute;
-                        right: 20px;
-                        opacity: 100%;
-                        color: black;
-                        transition: ease-in-out 0.35s;
-                    }
-                    .fa-solid{
-                        position: absolute;
-                        right: 20px;
-                        opacity: 0%;
-                        color: #FF79DA;
-                        transition: ease-in-out 0.35s;
-                    }
-                    .fa-regular:hover{
-                        opacity: 0%;
-                        color: transparent;
-                    }
-                    .fa-solid:hover{
-                        opacity: 100%;
-                    }
-                }
-            }
+        justify-content: space-between;
+        padding-top: 10px;
+        .restaurant_text {
+          padding-left: 20px;
+          h3 {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: black;
+            padding-bottom: 5px;
+          }
+          p {
+            color: black;
+          }
         }
-        .restaurant_card:hover{
-            transform: scale(1.02);
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
-            transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+        .restaurant_heart {
+          position: relative;
+          padding-right: 20px;
+          padding-top: 10px;
+          font-size: 1.5em;
+          .fa-regular {
+            position: absolute;
+            right: 20px;
+            opacity: 100%;
+            color: black;
+            transition: ease-in-out 0.35s;
+          }
+          .fa-solid {
+            position: absolute;
+            right: 20px;
+            opacity: 0%;
+            color: #ff79da;
+            transition: ease-in-out 0.35s;
+          }
+          .fa-regular:hover {
+            opacity: 0%;
+            color: transparent;
+          }
+          .fa-solid:hover {
+            opacity: 100%;
+          }
         }
+      }
     }
+    .restaurant_card:hover {
+      transform: scale(1.02);
+      box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
+      transition: cubic-bezier(0.3, 0, 0.2, 1) 0.3s;
+    }
+  }
 }
 
 /* Footer */
 
-footer{
-    background-color: #243531;
-    padding: 20px 20px 40px 20px;
-    .footer_logo{
-        font-family: $shrik;
-        color: white;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        font-size: 1.15em;
+footer {
+  background-color: #243531;
+  padding: 20px 20px 40px 20px;
+  .footer_logo {
+    font-family: $shrik;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.15em;
+  }
+  .footer_sec {
+    font-family: $rob;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    .footer_link {
+      display: flex;
     }
-    .footer_sec{
-        font-family: $rob;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        .footer_link{
-            display: flex;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-            i{
-                padding-right: 10px;
-            }
-        }
-        a:hover{
-            color: #9356DC;
-        }
+    a {
+      text-decoration: none;
+      color: white;
+      i {
+        padding-right: 10px;
+      }
     }
+    a:hover {
+      color: #9356dc;
+    }
+  }
 }
