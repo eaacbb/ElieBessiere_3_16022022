@@ -251,6 +251,9 @@ header {
     .meal_3 {
       animation: fade 1s linear 0.9s 1 normal forwards;
     }
+    .meal_4 {
+      animation: fade 1s linear 1.2s 1 normal forwards;
+    }
     .meal:hover {
       transform: scale(1.01);
       box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
