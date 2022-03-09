@@ -529,6 +529,9 @@ footer {
     margin-right: 2.5%;
     margin-left: 2.5%;
   }
+  .fonctionnement .helps .help h3 {
+    font-size: 0.9em;
+  }
 }
 
 .restaurants {

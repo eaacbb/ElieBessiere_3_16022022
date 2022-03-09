@@ -18,14 +18,14 @@ $rob: "roboto", sans-serif;
 /* Animations */
 
 @keyframes fade {
-    from{
-        opacity: 0%;
-        transform: translateY(20px);
-    }
-    to{
-        opacity: 100%;
-        transform: translateY(0px);
-    }
+  from {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
 }
 
 /* Header */
@@ -47,11 +47,31 @@ header {
     text-align: center;
   }
 }
+@media all and (min-width: 1280px) {
+  .logo {
+    padding: 30px 0 30px 0;
+    h1 {
+      font-size: 5em;
+    }
+  }
+}
 .fa-arrow-left {
   position: absolute;
   top: 21px;
   left: 25px;
   font-size: 1.5em;
+}
+@media all and (min-width: 1280px) {
+  .fa-arrow-left {
+    top: 52px;
+    left: 80px;
+    font-size: 2.5em;
+  }
+}
+
+@media all and (min-width: 1280px) {
+}
+@media all and (min-width: 992px) {
 }
 
 /* Image */
@@ -80,6 +100,13 @@ header {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   margin-top: -50px;
+  @media all and (min-width: 992px) {
+    .respmenu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
   .restaurant_title {
     display: flex;
     justify-content: space-between;
@@ -89,15 +116,25 @@ header {
     h2 {
       font-family: $shrik;
       font-size: 1.75em;
+      @media all and (min-width: 1280px) {
+        font-size: 3em;
+        padding-left: 5%;
+      }
     }
     .restaurant_heart {
       font-size: 1.8em;
+      @media all and (min-width: 1280px) {
+        font-size: 2.5em;
+      }
       .fa-regular {
         position: absolute;
         right: 40px;
         opacity: 100%;
         color: black;
         transition: ease-in-out 0.35s;
+        @media all and (min-width: 1280px) {
+          right: 80px;
+        }
       }
       .fa-solid {
         position: absolute;
@@ -105,6 +142,9 @@ header {
         opacity: 0%;
         color: #ff79da;
         transition: ease-in-out 0.35s;
+        @media all and (min-width: 1280px) {
+          right: 80px;
+        }
       }
       .fa-regular:hover {
         opacity: 0%;
@@ -121,6 +161,9 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: $rob;
+    @media all and (min-width: 1280px) {
+      width: 25%;
+    }
     h3 {
       width: 40px;
       padding: 10px 0 5px 0;
@@ -152,6 +195,12 @@ header {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          @media all and (min-width: 992px) {
+            font-size: 0.9em;
+          }
+          @media all and (min-width: 1280px) {
+            font-size: 1.35em;
+          }
         }
         .meal_desc {
           display: flex;
@@ -164,6 +213,12 @@ header {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @media all and (min-width: 992px) {
+              font-size: 0.85em;
+            }
+            @media all and (min-width: 1280px) {
+              font-size: 1.2em;
+            }
           }
           .price {
             font-weight: 700;
@@ -184,14 +239,14 @@ header {
         font-size: 1.35em;
       }
     }
-    .meal_1{
-        animation: fade 1s linear 0.3s 1 normal forwards;
+    .meal_1 {
+      animation: fade 1s linear 0.3s 1 normal forwards;
     }
-    .meal_2{
-        animation: fade 1s linear 0.6s 1 normal forwards;
+    .meal_2 {
+      animation: fade 1s linear 0.6s 1 normal forwards;
     }
-    .meal_3{
-        animation: fade 1s linear 0.9s 1 normal forwards;
+    .meal_3 {
+      animation: fade 1s linear 0.9s 1 normal forwards;
     }
     .meal:hover {
       transform: scale(1.01);
@@ -221,6 +276,11 @@ header {
       font-weight: 400;
       border-radius: 30px;
       box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px $secondaire inset;
+      @media all and (min-width: 1280px) {
+          margin-top: 30px;
+          padding: 20px 80px;
+          font-size: 1.5em;
+      }
     }
     a:hover {
       background-color: #ff79d986;
@@ -261,4 +321,27 @@ footer {
       color: #9356dc;
     }
   }
+}
+@media all and (min-width: 992px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .footer_logo{
+            font-size: 1.6em;
+        }
+        .links{
+            font-size: 1.2em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .footer_sec{
+                padding-left: 15px;
+                padding-right: 15px;
+                border-right: 1px solid white;
+                border-left: 1px solid white;
+            }
+        }
+    }
 }
