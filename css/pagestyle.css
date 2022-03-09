@@ -251,9 +251,15 @@ header a {
   font-family: "roboto", sans-serif;
 }
 
+@media all and (min-width: 992px) {
+  .menus .menu {
+    width: 32%;
+  }
+}
+
 @media all and (min-width: 1280px) {
   .menus .menu {
-    width: 25%;
+    width: 30%;
   }
 }
 
