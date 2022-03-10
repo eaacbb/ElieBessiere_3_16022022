@@ -569,8 +569,10 @@ footer .footer_sec a:hover {
   footer .links .footer_sec {
     padding-left: 15px;
     padding-right: 15px;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    border-right: 2px solid white;
+  }
+  footer .links .footer_sec:last-child {
+    border-right: transparent;
   }
 }
 /*# sourceMappingURL=pagestyle.css.map */
