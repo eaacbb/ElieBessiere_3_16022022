@@ -223,7 +223,10 @@ header a {
   position: absolute;
   right: 40px;
   opacity: 0%;
-  color: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(61%, #ff79da));
+  background: linear-gradient(180deg, #9356dc 0%, #ff79da 61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-transition: ease-in-out 0.35s;
   transition: ease-in-out 0.35s;
 }
@@ -234,13 +237,13 @@ header a {
   }
 }
 
-.menus .restaurant_title .restaurant_heart .fa-regular:hover {
+.menus .restaurant_title .restaurant_heart:hover .fa-regular {
   opacity: 0%;
   color: transparent;
   cursor: pointer;
 }
 
-.menus .restaurant_title .restaurant_heart .fa-solid:hover {
+.menus .restaurant_title .restaurant_heart:hover .fa-solid {
   opacity: 100%;
   cursor: pointer;
 }
@@ -394,6 +397,41 @@ header a {
           animation: fade 1s linear 0.9s 1 normal forwards;
 }
 
+.menus .menu .meal_4 {
+  -webkit-animation: fade 1s linear 1.2s 1 normal forwards;
+          animation: fade 1s linear 1.2s 1 normal forwards;
+}
+
+.menus .menu .meal_5 {
+  -webkit-animation: fade 1s linear 1.5s 1 normal forwards;
+          animation: fade 1s linear 1.5s 1 normal forwards;
+}
+
+.menus .menu .meal_6 {
+  -webkit-animation: fade 1s linear 1.8s 1 normal forwards;
+          animation: fade 1s linear 1.8s 1 normal forwards;
+}
+
+.menus .menu .meal_7 {
+  -webkit-animation: fade 1s linear 2.1s 1 normal forwards;
+          animation: fade 1s linear 2.1s 1 normal forwards;
+}
+
+.menus .menu .meal_8 {
+  -webkit-animation: fade 1s linear 2.4s 1 normal forwards;
+          animation: fade 1s linear 2.4s 1 normal forwards;
+}
+
+.menus .menu .meal_9 {
+  -webkit-animation: fade 1s linear 2.7s 1 normal forwards;
+          animation: fade 1s linear 2.7s 1 normal forwards;
+}
+
+.menus .menu .meal_10 {
+  -webkit-animation: fade 1s linear 3s 1 normal forwards;
+          animation: fade 1s linear 3s 1 normal forwards;
+}
+
 .menus .menu .meal:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
@@ -404,7 +442,7 @@ header a {
 }
 
 .menus .menu .meal:hover .check {
-  width: 16%;
+  width: 65px;
   -webkit-transition: linear 0.5s;
   transition: linear 0.5s;
 }

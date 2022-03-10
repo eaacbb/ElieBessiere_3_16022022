@@ -28,6 +28,9 @@ $rob: "roboto", sans-serif;
   }
 }
 
+$mealnumber: 10;
+$time: 0.3s;
+
 /* Header */
 
 header {
@@ -67,11 +70,6 @@ header {
     left: 80px;
     font-size: 2.5em;
   }
-}
-
-@media all and (min-width: 1280px) {
-}
-@media all and (min-width: 992px) {
 }
 
 /* Image */
@@ -140,18 +138,22 @@ header {
         position: absolute;
         right: 40px;
         opacity: 0%;
-        color: #ff79da;
+        background: linear-gradient(180deg, $primaire 0%, $secondaire 61%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transition: ease-in-out 0.35s;
         @media all and (min-width: 1280px) {
           right: 80px;
         }
       }
-      .fa-regular:hover {
+    }
+    .restaurant_heart:hover {
+      .fa-regular {
         opacity: 0%;
         color: transparent;
         cursor: pointer;
       }
-      .fa-solid:hover {
+      .fa-solid {
         opacity: 100%;
         cursor: pointer;
       }
@@ -165,7 +167,7 @@ header {
       width: 32%;
     }
     @media all and (min-width: 1280px) {
-        width: 30%;
+      width: 30%;
     }
     h3 {
       width: 40px;
@@ -242,24 +244,19 @@ header {
         font-size: 1.35em;
       }
     }
-    .meal_1 {
-      animation: fade 1s linear 0.3s 1 normal forwards;
+
+    @for $i from 1 through $mealnumber {
+      .meal_#{$i} {
+        animation: fade 1s linear $time * $i 1 normal forwards;
+      }
     }
-    .meal_2 {
-      animation: fade 1s linear 0.6s 1 normal forwards;
-    }
-    .meal_3 {
-      animation: fade 1s linear 0.9s 1 normal forwards;
-    }
-    .meal_4 {
-      animation: fade 1s linear 1.2s 1 normal forwards;
-    }
+
     .meal:hover {
       transform: scale(1.01);
       box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.35);
       transition: ease-in-out 0.3s;
       .check {
-        width: 16%;
+        width: 65px;
         transition: linear 0.5s;
         .fa-circle-check {
           transition: ease-in-out 0.5s;
@@ -283,9 +280,9 @@ header {
       border-radius: 30px;
       box-shadow: 1.01px 1.01px 10px 0.1px rgba(0, 0, 0, 0.418), 40px 40px 45px 0px $secondaire inset;
       @media all and (min-width: 1280px) {
-          margin-top: 30px;
-          padding: 20px 80px;
-          font-size: 1.5em;
+        margin-top: 30px;
+        padding: 20px 80px;
+        font-size: 1.5em;
       }
     }
     a:hover {
@@ -300,54 +297,54 @@ header {
 /* Footer */
 
 footer {
-    background-color: #243531;
-    padding: 20px 20px 40px 20px;
-    .footer_logo {
-      font-family: $shrik;
+  background-color: #243531;
+  padding: 20px 20px 40px 20px;
+  .footer_logo {
+    font-family: $shrik;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.15em;
+  }
+  .footer_sec {
+    font-family: $rob;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    .footer_link {
+      display: flex;
+    }
+    a {
+      text-decoration: none;
       color: white;
-      padding-top: 10px;
-      padding-bottom: 20px;
-      font-size: 1.15em;
+      i {
+        padding-right: 10px;
+      }
     }
-    .footer_sec {
-      font-family: $rob;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      .footer_link {
-        display: flex;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-        i {
-          padding-right: 10px;
-        }
-      }
-      a:hover {
-        color: #9356dc;
+    a:hover {
+      color: #9356dc;
+    }
+  }
+}
+@media all and (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footer_logo {
+      font-size: 1.6em;
+    }
+    .links {
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .footer_sec {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
       }
     }
   }
-  @media all and (min-width: 992px) {
-      footer{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .footer_logo{
-              font-size: 1.6em;
-          }
-          .links{
-              font-size: 1.2em;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: center;
-              .footer_sec{
-                  padding-left: 15px;
-                  padding-right: 15px;
-                  border-right: 1px solid white;
-                  border-left: 1px solid white;
-              }
-          }
-      }
-  }
+}
